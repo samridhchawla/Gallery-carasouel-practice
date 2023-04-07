@@ -7,9 +7,9 @@ const speedWheel = 0.02;
 const speedDrag = -0.1;
 
 const getZindex = (array, index) =>
-    array.map((_, i) =>
-        index === i ? array.length : array.length - Math.abs(index - i)
-    );
+  array.map((_, i) =>
+    index === i ? array.length : array.length - Math.abs(index - i)
+  );
 
 const $items = document.querySelectorAll(".carousel-item");
 const $cursors = document.querySelectorAll(".cursor");
@@ -54,7 +54,7 @@ const handleMouseMove = (e) => {
 
 const handleMouseDown = (e) => {
   isDown = true;
-  startX = e.clientX || (etouches && e.touches[0].clientX) || 0;
+  startX = e.clientX || (e.touches && e.touches[0].clientX) || 0;
 };
 const handleMouseUp = () => {
   isDown = false;
